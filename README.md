@@ -8,6 +8,46 @@ This project goes beyond a conventional Power BI dashboard. It combines **data a
 
 ---
 
+## 🖼️ Project Screenshots
+
+### Experience Overview
+
+<p align="center">
+  <img src="./portal-overview.jpg" alt="The Road to Glory — Overview" width="900">
+</p>
+
+### Tournament
+
+<p align="center">
+  <img src="./portal-tournament.jpg" alt="The Road to Glory — Tournament" width="900">
+</p>
+
+### Match Center
+
+<p align="center">
+  <img src="./portal-matches.jpg" alt="The Road to Glory — Match Center" width="900">
+</p>
+
+### Players
+
+<p align="center">
+  <img src="./portal-players.jpg" alt="The Road to Glory — Players" width="900">
+</p>
+
+### Stadiums
+
+<p align="center">
+  <img src="./portal-stadiums.jpg" alt="The Road to Glory — Stadiums" width="900">
+</p>
+
+### Explore
+
+<p align="center">
+  <img src="./portal-explore.jpg" alt="The Road to Glory — Explore" width="900">
+</p>
+
+---
+
 ## 🎯 Project Vision
 
 **The Road to Glory** was designed to answer more than *"What does the data say?"*
