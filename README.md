@@ -398,7 +398,7 @@ The-Road-To-Glory/
 │   ├── Tournament.jpg
 │   └── Trophy.png
 │
-├── Dataset/
+├── Data/
 │   ├── dim_group.xlsx
 │   ├── dim_players.xlsx
 │   ├── dim_refereees.xlsx
