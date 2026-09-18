@@ -2,71 +2,63 @@
 
 > **FIFA WORLD CUP 2026 — DATA EXPERIENCE**
 
-An interactive football analytics experience built around the **FIFA World Cup 2026**.
+**The Road to Glory** is an interactive football analytics experience built around the **FIFA World Cup 2026**. Instead of presenting the tournament as a conventional BI dashboard, the project combines **web scraping, data cleaning, data modeling, Power BI, DAX, and custom HTML/CSS** to create a cinematic, sports-broadcast-inspired analytical experience.
 
-This project goes beyond a conventional Power BI dashboard. It combines **data analytics, interactive storytelling, custom HTML/CSS, and football-inspired visual design** to turn tournament data into a cinematic data experience.
+The project turns structured tournament data into an interactive journey across **teams, matches, stadiums, tournament progression, players, scoring, and discipline**.
 
 ---
 
-## 🖼️ Project Screenshots
+## 🖼️ Experience Screenshots
 
-### Experience Overview
+### Landing Page
+<p align="center"><img src="./Screenshots/Landing%20Page.png" alt="The Road to Glory — Landing Page" width="900"></p>
 
-<p align="center">
-  <img src="./portal-overview.jpg" alt="The Road to Glory — Overview" width="900">
-</p>
+### Overview
+<p align="center"><img src="./Screenshots/Overview.png" alt="The Road to Glory — Overview" width="900"></p>
 
-### Tournament
+### Group Stage
+<p align="center"><img src="./Screenshots/Group%20Stage.png" alt="The Road to Glory — Group Stage" width="900"></p>
 
-<p align="center">
-  <img src="./portal-tournament.jpg" alt="The Road to Glory — Tournament" width="900">
-</p>
+### Knockout Stage
+<p align="center"><img src="./Screenshots/Knockout%20Stage.png" alt="The Road to Glory — Knockout Stage" width="900"></p>
 
 ### Match Center
-
-<p align="center">
-  <img src="./portal-matches.jpg" alt="The Road to Glory — Match Center" width="900">
-</p>
-
-### Players
-
-<p align="center">
-  <img src="./portal-players.jpg" alt="The Road to Glory — Players" width="900">
-</p>
+<p align="center"><img src="./Screenshots/Matches.png" alt="The Road to Glory — Matches" width="900"></p>
 
 ### Stadiums
+<p align="center"><img src="./Screenshots/Stadiums.png" alt="The Road to Glory — Stadiums" width="900"></p>
 
-<p align="center">
-  <img src="./portal-stadiums.jpg" alt="The Road to Glory — Stadiums" width="900">
-</p>
+### Top Scorers
+<p align="center"><img src="./Screenshots/Top%20Scorers.png" alt="The Road to Glory — Top Scorers" width="900"></p>
 
-### Explore
+### Own Goals
+<p align="center"><img src="./Screenshots/Top%20Own%20Scorers.png" alt="The Road to Glory — Own Goals" width="900"></p>
 
-<p align="center">
-  <img src="./portal-explore.jpg" alt="The Road to Glory — Explore" width="900">
-</p>
+### Discipline
+<p align="center"><img src="./Screenshots/Discipline%20Players.png" alt="The Road to Glory — Player Discipline" width="900"></p>
 
----
-
-## 🎯 Project Vision
-
-**The Road to Glory** was designed to answer more than *"What does the data say?"*
-
-It explores:
-
-- How the tournament is structured
-- How teams progress from the group stage to the final
-- Where the tournament is played
-- Which players stand out
-- How matches unfold
-- How goals and discipline shape the tournament
-- How raw football data can become an engaging analytical experience
-
-The objective was to build something closer to a **FIFA / ESPN-style match and tournament experience** than a traditional BI report.
+### Referees
+<p align="center"><img src="./Screenshots/Referees.png" alt="The Road to Glory — Referees" width="900"></p>
 
 ---
 
-## 📊 Tournament at a Glance
+## 🎯 Project Objective
+
+The objective was to answer questions such as:
+
+- How is the 48-team tournament structured?
+- How does the competition move from the group stage into the knockout rounds?
+- How are matches distributed across the tournament stages?
+- Where are the matches played?
+- Which players contribute to scoring?
+- How is player discipline represented?
+- How can football data be presented as an engaging analytical product rather than a collection of static charts?
+
+The result is designed to feel closer to a **FIFA / ESPN-style tournament and match experience** than a traditional Power BI report.
+
+---
+
+## 📊 Tournament Data at a Glance
 
 | Metric | Value |
 |---|---:|
@@ -78,88 +70,190 @@ The objective was to build something closer to a **FIFA / ESPN-style match and t
 | 🏆 Knockout Matches | **32** |
 | 👤 Player Goal Records | **195** |
 | 🟨 Discipline Records | **19** |
+| 🗂️ Analytical Excel Tables | **11** |
 
-All headline figures are calculated from the project datasets rather than manually hard-coded into the analytical logic.
+### Derived tournament metrics
+
+Using the dataset-level figures represented in the repository:
+
+- **Average goals per match:** **2.96**
+- **Group-stage share of all matches:** **69.23%**
+- **Knockout-stage share of all matches:** **30.77%**
+- **Matches per participating team:** **2.17** when calculated as total matches ÷ teams; this is a dataset-level ratio, not the number of matches played by an individual team.
+- The **32-match knockout total** corresponds to a knockout model that includes the complete bracketed progression plus the additional knockout fixture represented in the dataset.
+
+These ratios are intended to provide quick analytical context; they do not replace the dynamic calculations inside the Power BI model.
 
 ---
 
-## 🔄 End-to-End Data Workflow
+## 🔎 Data Analysis & Key Insights
+
+### 1. Tournament scale
+
+The model represents a **48-team, 104-match tournament** with **308 goals** across **16 stadiums**. With an overall average of **2.96 goals per match**, the dataset supports both tournament-level KPI analysis and detailed match/player exploration.
+
+### 2. Group-stage concentration
+
+The group stage contains **72 of the 104 matches**, meaning roughly **69% of all tournament fixtures** occur before the knockout phase. This makes group performance, standings, qualification paths, and group-level comparisons a major analytical component of the experience.
+
+### 3. Knockout progression
+
+The repository separates the knockout journey from the group stage and models progression through:
+
+**Round of 32 → Round of 16 → Quarter-finals → Semi-finals → Final**
+
+The match model also accounts for **AET (extra time)** and **PEN (penalty shootouts)**, allowing knockout outcomes to be represented without reducing every match to a simple regular-time score.
+
+### 4. Scoring analysis
+
+The player-goal fact table contains **195 player-goal records** and supports player-level scoring analysis. This feeds the **Top Scorers** experience as well as the own-goal analysis shown in the screenshots.
+
+The model is structured so scoring information can be analyzed through the relationships between **players, matches, teams, and tournament stages**, rather than treating a scorer list as an isolated table.
+
+### 5. Discipline analysis
+
+The player-discipline fact table contains **19 discipline records** and provides a dedicated analytical path for player cards/discipline information.
+
+The experience separates **Top Scorers** and **Discipline** so scoring performance and disciplinary events can be explored independently.
+
+### 6. Stadium analysis
+
+The tournament venue model contains **16 stadiums**, allowing the project to connect the tournament story to its physical locations. Stadium analysis is treated as its own experience rather than only as a match attribute.
+
+### 7. Relational data model
+
+The dataset is organized into dimension and fact tables, which makes the analytical layer more scalable than a single flat Excel sheet.
+
+**Dimensions**
+- Teams
+- Players
+- Stadiums
+- Stages
+- Groups
+- Referees
+
+**Facts**
+- Matches
+- Match Teams
+- Group Standings
+- Player Goals
+- Player Discipline
+
+This structure supports filtering and cross-analysis across tournament entities.
+
+> **Data note:** The insights above are based on the repository's current dataset structure and the tournament-level figures represented by the model. Detailed player/team rankings are intentionally left to the dynamic Power BI calculations rather than duplicating potentially changing rankings in static README text.
+
+---
+
+## 🔄 End-to-End Data Pipeline
+
+The project was built as a complete analytics workflow:
 
 ```text
-Web Sources
-    ↓
-Data Collection
-    ↓
-Python + Beautiful Soup
-    ↓
+Public Web Sources
+        ↓
+Python Web Scraping
+        ↓
+Beautiful Soup
+        ↓
 Raw Tournament Data
-    ↓
+        ↓
 Pandas
-    ↓
+        ↓
 Cleaning & Transformation
-    ↓
+        ↓
+Structured Excel Tables
+        ↓
 Power BI Data Model
-    ↓
-DAX Measures
-    ↓
+        ↓
+Power Query + DAX
+        ↓
 HTML + CSS
-    ↓
+        ↓
 Interactive FIFA World Cup 2026
 Data Experience
 ```
 
----
+### Web Scraping
 
-## 🛠️ Tech Stack
+**Beautiful Soup** was used to collect tournament information from publicly available web sources.
 
-### 🐍 Python
-Used for data collection and preparation.
+The scraping stage focused on extracting structured information such as:
 
-- Python
-- Beautiful Soup
-- Pandas
+- Teams
+- Matches
+- Stadiums
+- Players
+- Goals
+- Discipline
+- Groups
+- Tournament stages
+- Referee information
 
-### 📊 Power BI
-Used as the analytical layer for:
+### Data Cleaning
 
-- Data modeling
-- Relationships
-- Measures
-- KPIs
-- Filtering
-- Tournament analysis
-- Interactive navigation
+**Pandas** was used after scraping to prepare the data for analysis.
 
-### 🧮 DAX
-Used to create dynamic analytical calculations, including tournament KPIs, player statistics, match analysis, stage-level calculations, and cumulative metrics.
+The preparation workflow included:
 
-### 🎨 HTML & CSS
-Custom HTML/CSS components were used to move the project beyond standard Power BI visuals and create a more immersive interface.
+- Cleaning raw records
+- Standardizing fields
+- Structuring dimension/fact datasets
+- Handling inconsistencies
+- Preparing analysis-ready Excel tables
+- Separating player-level records from non-player notes where required
+
+### BI Modeling
+
+The cleaned data was loaded into Power BI and organized into a relational analytical model.
+
+### DAX
+
+DAX provides dynamic calculations for:
+
+- Tournament KPIs
+- Match statistics
+- Stage analysis
+- Player scoring
+- Discipline
+- Group standings
+- Tournament progression
+- Cumulative tournament metrics
+
+### HTML & CSS
+
+Custom HTML/CSS components extend the Power BI experience with a more immersive visual language, including tournament navigation, match cards, player-focused layouts, KPI treatments, and sports-broadcast-inspired presentation.
 
 ---
 
 ## 🗂️ Data Model
 
-The project is built around dedicated tournament datasets:
+The repository currently contains **11 Excel tables**:
 
-- `Teams.xlsx`
-- `Matches.xlsx`
-- `Stadium.xlsx`
-- `Players.xlsx`
-- `Group & Knockout.xlsx`
+| Type | Table | Purpose |
+|---|---|---|
+| Dimension | `dim_teams.xlsx` | Team attributes |
+| Dimension | `dim_players.xlsx` | Player information |
+| Dimension | `dim_stadiums.xlsx` | Stadium information |
+| Dimension | `dim_stage.xlsx` | Tournament stages |
+| Dimension | `dim_group.xlsx` | Group structure |
+| Dimension | `dim_refereees.xlsx` | Referee information |
+| Fact | `fact_matches.xlsx` | Match-level records |
+| Fact | `fact_match_teams.xlsx` | Team participation in matches |
+| Fact | `fact_group_standings.xlsx` | Group-stage standings |
+| Fact | `fact_player_goals.xlsx` | Player scoring records |
+| Fact | `fact_player_discipline.xlsx` | Player discipline records |
 
-The datasets cover teams, matches, stadiums, players, goals, discipline, groups, and knockout-stage progression.
-
-The player dataset also contains non-player note rows, which are excluded from player-level analysis.
+This separation gives the Power BI model clear analytical grain and makes cross-filtering between tournament entities more reliable.
 
 ---
 
 ## 🏆 Tournament Structure
 
-The tournament experience follows the complete World Cup journey:
+The experience follows the complete tournament journey:
 
 ```text
-GROUP STAGE
+GROUPS A–L
     ↓
 ROUND OF 32
     ↓
@@ -174,226 +268,182 @@ FINAL
 🏆 CHAMPION
 ```
 
-The knockout experience supports match outcomes including **extra time (AET)** and **penalty shootouts (PEN)** where applicable.
+The knockout model supports match outcomes involving:
+
+- Regular-time results
+- Extra time (**AET**)
+- Penalty shootouts (**PEN**)
+
+Where exact goal timestamps are unavailable, cumulative goal storytelling follows the tournament/stage and match order rather than inventing minute-level timing.
 
 ---
 
 ## 🖥️ Experience Sections
 
-### 🏠 Intro
+### 🏠 Landing Page
+A cinematic entry point introducing the **Road to Glory** concept.
 
-A cinematic entry point introducing the **Road to Glory** concept and guiding users into the tournament experience.
+### 📈 Overview
+A high-level analytical view of tournament KPIs and the overall competition.
 
-### 📈 Tournament Pulse
+### 🌍 Group Stage
+A structured view of the group phase, standings, and team progression.
 
-A high-level analytical view of the tournament with dynamic KPIs and tournament statistics.
-
-### 🏟️ World's Stages
-
-An exploration of the **16 stadiums** hosting the tournament, connecting venue information with the tournament story.
+### 🏆 Knockout Stage
+A visual path through the knockout rounds and the road toward the final.
 
 ### ⚽ Match Center
+A match-focused experience covering fixtures, results, stages, and match details.
 
-A match-focused experience covering tournament fixtures, results, stages, and match details.
+### 🏟️ Stadiums
+A venue-focused exploration of the tournament's 16 stadiums.
 
-The match experience can surface a goal timeline and detailed match information rather than presenting matches as a simple static table.
+### ⭐ Players
+A player-focused experience covering scoring and discipline.
 
-### 🛣️ Road to Glory
+### 🥅 Top Scorers & Own Goals
+Dedicated views for player scoring and own-goal records.
 
-A visual tournament journey from the **12 groups** through the knockout stages to the final.
+### 🟨 Discipline
+A separate player-discipline experience.
 
-The bracket follows:
-
-**Groups A–L → R32 → R16 → QF → SF → Final**
-
-### ⭐ Stars
-
-A player-focused section highlighting scoring and discipline information.
-
-The experience separates:
-
-- **Top Scorers**
-- **Discipline**
-
----
-
-## 📌 Analytical Focus
-
-The project explores several dimensions of the tournament:
-
-### Teams
-- Team participation
-- Group allocation
-- Tournament progression
-- Stage performance
-
-### Matches
-- Fixtures
-- Results
-- Tournament stages
-- Goals
-- Extra time
-- Penalty shootouts
-
-### Players
-- Goals
-- Scoring contribution
-- Top scorers
-- Player-level tournament statistics
-
-### Stadiums
-- Stadium information
-- Locations
-- Tournament venues
-
-### Tournament Progression
-- Groups A–L
-- Round of 32
-- Round of 16
-- Quarter-finals
-- Semi-finals
-- Final
-
-### Discipline
-- Player discipline
-- Cards and related tournament records
+### 👨‍⚖️ Referees
+A dedicated view for referee information and tournament context.
 
 ---
 
 ## 🎨 Design Philosophy
 
-The main design goal was to create a **data experience**, not simply a dashboard.
+The project intentionally avoids the visual language of a conventional corporate dashboard.
 
-The visual direction takes inspiration from:
+The design direction combines:
 
-- FIFA tournament experiences
-- ESPN match centers
-- DAZN-style sports interfaces
+- FIFA-inspired tournament presentation
+- ESPN-style match-center concepts
+- DAZN-inspired sports UI
 - Broadcast graphics
-- Modern data journalism
+- Data journalism
+- Interactive analytics
 
-The interface uses:
+The experience uses:
 
 - Cinematic football visuals
 - Strong typography
-- Custom KPI components
-- Interactive navigation
+- Dynamic KPIs
 - Tournament brackets
 - Match cards
 - Player tables
 - Goal timelines
 - Progress indicators
 - HTML/CSS components
-- Motion and interaction where appropriate
+- Interactive navigation
 
-The design prioritizes **storytelling, hierarchy, and exploration** while keeping the underlying analytics dynamic.
-
----
-
-## 🧠 Key Data Analytics Challenges
-
-### Dynamic Tournament Calculations
-
-Tournament statistics are calculated from the underlying data model so that the experience can respond to filters and selections.
-
-### Match Ordering
-
-Where exact goal timestamps are unavailable, cumulative goal analysis follows the **tournament stage and match order** instead of assuming unavailable minute-level information.
-
-### Knockout Logic
-
-The tournament structure accounts for different match outcomes, including:
-
-- Regular-time wins
-- Extra-time wins (**AET**)
-- Penalty shootouts (**PEN**)
-
-### Data Cleaning
-
-Web-collected data required preprocessing before being loaded into the analytical model.
-
-Pandas was used to:
-
-- Clean raw records
-- Standardize fields
-- Structure datasets
-- Handle inconsistencies
-- Prepare analysis-ready tables
+The goal is to make the analytical layer feel like a **digital football product**, while keeping the underlying calculations data-driven.
 
 ---
 
-## 🚀 What This Project Demonstrates
+## 🧠 Analytical Challenges
 
-This project demonstrates an end-to-end analytics workflow:
+### Dynamic tournament calculations
 
-**Data Collection → Data Cleaning → Data Modeling → DAX → Visualization → Interactive Experience**
+Key statistics are calculated from the underlying model so filters and selections can change the analytical context.
 
-It combines technical analytics skills with **data storytelling and UI/UX thinking**.
+### Match ordering
 
-### Skills Demonstrated
+When exact goal timestamps are not available, cumulative analysis follows stage/match order rather than introducing unsupported timing assumptions.
 
-- Python
-- Web Scraping
-- Beautiful Soup
-- Pandas
-- Data Cleaning
-- Data Modeling
-- Power BI
-- DAX
-- Data Visualization
-- HTML
-- CSS
-- Dashboard UX/UI
-- Data Storytelling
-- Interactive Analytics
+### Knockout logic
+
+The model distinguishes regular-time results from **AET** and **PEN** outcomes.
+
+### Data quality
+
+Because the source data originated from web scraping, cleaning and standardization were necessary before the information could be used reliably in the BI model.
+
+### Player records
+
+Player-level data required attention to non-player notes and record structure so that player analysis remains meaningful.
 
 ---
 
-## 📁 Project Structure
+## 🛠️ Technology Stack
+
+| Technology | Role |
+|---|---|
+| 🐍 Python | Web data collection and preparation |
+| 🥣 Beautiful Soup | Web scraping |
+| 🐼 Pandas | Cleaning and transformation |
+| 📊 Power BI | Data modeling and analytical experience |
+| 🧮 DAX | Dynamic calculations and KPIs |
+| 🔄 Power Query | Data transformation inside Power BI |
+| 🎨 HTML | Custom visual components |
+| 🎨 CSS | Custom styling and layout |
+
+---
+
+## 📁 Repository Structure
 
 ```text
 The-Road-To-Glory/
 │
-├── Data/
-│   ├── Teams.xlsx
-│   ├── Matches.xlsx
-│   ├── Stadium.xlsx
-│   ├── Players.xlsx
-│   └── Group & Knockout.xlsx
-│
-├── Python/
-│   └── Web scraping & data preparation
-│
-├── Power BI/
-│   └── Analytical model & report
-│
 ├── Assets/
-│   └── Visual resources
+│   ├── Matches.jpg
+│   ├── Overview.jpg
+│   ├── Players.jpg
+│   ├── Stadium.jpg
+│   ├── Stadiums.jpg
+│   ├── Tournament.jpg
+│   └── Trophy.png
 │
-└── README.md
+├── Dataset/
+│   ├── dim_group.xlsx
+│   ├── dim_players.xlsx
+│   ├── dim_refereees.xlsx
+│   ├── dim_stadiums.xlsx
+│   ├── dim_stage.xlsx
+│   ├── dim_teams.xlsx
+│   ├── fact_group_standings.xlsx
+│   ├── fact_match_teams.xlsx
+│   ├── fact_matches.xlsx
+│   ├── fact_player_discipline.xlsx
+│   └── fact_player_goals.xlsx
+│
+├── Screenshots/
+│   ├── Landing Page.png
+│   ├── Overview.png
+│   ├── Group Stage.png
+│   ├── Knockout Stage.png
+│   ├── Matches.png
+│   ├── Stadiums.png
+│   ├── Top Scorers.png
+│   ├── Top Own Scorers.png
+│   ├── Discipline Players.png
+│   └── Referees.png
+│
+├── LICENSE
+├── README.md
+└── THE ROAD TO GLORY.pbix
 ```
-
-> Folder names may vary from the current repository structure; the structure above describes the intended organization of the project components.
 
 ---
 
 ## 📚 Data Source
 
-The tournament information was collected from publicly available web sources, including **Wikipedia**, using Python web scraping.
+Tournament information was collected from publicly available web sources using Python and **Beautiful Soup**. The collected information was then cleaned and transformed with **Pandas** before being structured for Power BI analysis.
 
-**Primary source:**
+The project references publicly available tournament information, including:
 
-🔗 [FIFA World Cup 2026 — Wikipedia](https://en.wikipedia.org/wiki/2026_FIFA_World_Cup)
-
-The scraped information was subsequently cleaned and transformed before being used for analysis.
+[2026 FIFA World Cup — Wikipedia](https://en.wikipedia.org/wiki/2026_FIFA_World_Cup)
 
 ---
 
 ## 🎓 Project Context
 
-**The Road to Glory** is part of my portfolio as a **Data Analyst / BI Developer** and was developed to demonstrate how analytics can be presented as an interactive product rather than a collection of charts.
+**The Road to Glory** is a portfolio/graduation project demonstrating an end-to-end **Data Analyst / BI Developer** workflow:
 
-The project focuses on the complete journey from **raw web data to a polished analytical experience**.
+**Web Data → Scraping → Cleaning → Data Modeling → DAX → Visualization → Interactive Data Experience**
+
+The project focuses not only on producing correct analytical results, but also on communicating those results through a polished, football-specific user experience.
 
 ---
 
@@ -408,4 +458,4 @@ The project focuses on the complete journey from **raw web data to a polished an
 
 ---
 
-⭐ If you find the project interesting, feel free to explore the repository and the other analytics projects on my GitHub.
+⭐ **Explore the repository to see the dataset, Power BI model, screenshots, and the complete analytical experience.**
