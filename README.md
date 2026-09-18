@@ -11,37 +11,37 @@ The project turns structured tournament data into an interactive journey across 
 ## 🖼️ Experience Screenshots
 
 ### Landing Page
-<p align="center"><img src="./Screenshots/Landing%20Page.png" alt="The Road to Glory — Landing Page" width="900"></p>
+<p align="center"><img src="./Dashboard%20Previews/Landing%20Page.png" alt="The Road to Glory — Landing Page" width="900"></p>
 
 ### Overview
-<p align="center"><img src="./Screenshots/Overview.png" alt="The Road to Glory — Overview" width="900"></p>
+<p align="center"><img src="./Dashboard%20Previews/Overview.png" alt="The Road to Glory — Overview" width="900"></p>
 
 ### Stadiums
-<p align="center"><img src="./Screenshots/Stadiums.png" alt="The Road to Glory — Stadiums" width="900"></p>
+<p align="center"><img src="./Dashboard%20Previews/Stadiums.png" alt="The Road to Glory — Stadiums" width="900"></p>
 
 ### Referees
-<p align="center"><img src="./Screenshots/Referees.png" alt="The Road to Glory — Referees" width="900"></p>
+<p align="center"><img src="./Dashboard%20Previews/Referees.png" alt="The Road to Glory — Referees" width="900"></p>
 
 ### Top Scorers
-<p align="center"><img src="./Screenshots/Top%20Scorers.png" alt="The Road to Glory — Top Scorers" width="900"></p>
+<p align="center"><img src="./Dashboard%20Previews/Top%20Scorers.png" alt="The Road to Glory — Top Scorers" width="900"></p>
 
 ### Own Goals
-<p align="center"><img src="./Screenshots/Top%20Own%20Scorers.png" alt="The Road to Glory — Own Goals" width="900"></p>
+<p align="center"><img src="./Dashboard%20Previews/Top%20Own%20Scorers.png" alt="The Road to Glory — Own Goals" width="900"></p>
 
 ### Discipline
-<p align="center"><img src="./Screenshots/Discipline%20Players.png" alt="The Road to Glory — Player Discipline" width="900"></p>
+<p align="center"><img src="./Dashboard%20Previews/Discipline%20Players.png" alt="The Road to Glory — Player Discipline" width="900"></p>
 
 ### Match Center
-<p align="center"><img src="./Screenshots/Matches.png" alt="The Road to Glory — Matches" width="900"></p>
+<p align="center"><img src="./Dashboard%20Previews/Matches.png" alt="The Road to Glory — Matches" width="900"></p>
 
 ### Group Stage
-<p align="center"><img src="./Screenshots/Group%20Stage.png" alt="The Road to Glory — Group Stage" width="900"></p>
+<p align="center"><img src="./Dashboard%20Previews/Group%20Stage.png" alt="The Road to Glory — Group Stage" width="900"></p>
 
 ### Knockout Stage
-<p align="center"><img src="./Screenshots/Knockout%20Stage.png" alt="The Road to Glory — Knockout Stage" width="900"></p>
+<p align="center"><img src="./Dashboard%20Previews/Knockout%20Stage.png" alt="The Road to Glory — Knockout Stage" width="900"></p>
 
 ### Data Model
-<p align="center"><img src="./Screenshots/Model.png" alt="The Road to Glory — Power BI Data Model" width="900"></p>
+<p align="center"><img src="./Dashboard%20Previews/Model.png" alt="The Road to Glory — Power BI Data Model" width="900"></p>
 
 ---
 
