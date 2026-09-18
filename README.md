@@ -16,6 +16,9 @@ The project turns structured tournament data into an interactive journey across 
 ### Overview
 <p align="center"><img src="./Screenshots/Overview.png" alt="The Road to Glory — Overview" width="900"></p>
 
+### Data Model
+<p align="center"><img src="./Screenshots/Model.png" alt="The Road to Glory — Power BI Data Model" width="900"></p>
+
 ### Group Stage
 <p align="center"><img src="./Screenshots/Group%20Stage.png" alt="The Road to Glory — Group Stage" width="900"></p>
 
@@ -418,7 +421,8 @@ The-Road-To-Glory/
 │   ├── Top Scorers.png
 │   ├── Top Own Scorers.png
 │   ├── Discipline Players.png
-│   └── Referees.png
+│   ├── Referees.png
+│   └── Model.png
 │
 ├── LICENSE
 ├── README.md
