@@ -8,7 +8,7 @@ The project turns structured tournament data into an interactive journey across 
 
 ---
 
-## 🖼️ Experience Screenshots
+## Dashboard Screenshots
 
 ### Landing Page
 <p align="center"><img src="./Dashboard%20Previews/Landing%20Page.png" alt="The Road to Glory — Landing Page" width="900"></p>
@@ -281,7 +281,7 @@ Where exact goal timestamps are unavailable, cumulative goal storytelling follow
 
 ---
 
-## 🖥️ Experience Sections
+## Dashboard Experience
 
 ### 🏠 Landing Page
 A cinematic entry point introducing the **Road to Glory** concept.
