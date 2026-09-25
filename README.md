@@ -17,6 +17,13 @@
 
 ---
 
+
+## Business Questions & Key Analytical Takeaways
+- **Scoring intensity:** 312 goals across 104 matches produces an average of **3.0 goals per match**, providing a baseline for comparing scoring patterns across stages, teams, and match contexts.
+- **Multi-layer performance analysis:** Match results are linked with goal events, player discipline, group standings, referees, and stadium dimensions, enabling analysis beyond simple win/loss reporting.
+- **Tournament progression:** Separating group-stage and knockout-stage facts allows performance to be evaluated by competition phase rather than treating the tournament as one homogeneous population.
+- **Event-level granularity:** Goal minutes, penalty classifications, disciplinary actions, and referee assignments make the dataset suitable for analyzing when and how match events influence outcomes.
+
 ## Dashboard Visual Tour & Storytelling
 
 ### 1. Landing
