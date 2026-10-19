@@ -255,6 +255,7 @@ The report contains **6 dedicated pages** and multiple analytical drill-downs:
 
 <p align="center">
   <img src="./Dashboard%20Previews/Top%20Scorers.png" width="48%" alt="Top Scorers Preview" />
+  <img src="./Dashboard%20Previews/Top%20Own%20Scorers.png" width="48%" alt="Top Own Scorers Preview" />
   <img src="./Dashboard%20Previews/Discipline%20Players.png" width="48%" alt="Discipline Players Preview" />
 </p>
 
